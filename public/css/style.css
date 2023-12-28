@@ -1,0 +1,94 @@
+/* Reset básico y estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f7f7f7;
+    line-height: 1.6;
+    padding: 20px;
+    color: #333;
+}
+
+/* Estilos para el formulario */
+form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0b5ed7;
+}
+
+/* Estilos para la página de resultados */
+.result-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.result-container h1 {
+    margin-bottom: 20px;
+    color: #0d6efd;
+}
+
+.result {
+    text-align: left;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.result p {
+    font-size: 1em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.result p strong {
+    color: #0d6efd;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    form, .result-container {
+        width: auto;
+        margin: 20px;
+    }
+}

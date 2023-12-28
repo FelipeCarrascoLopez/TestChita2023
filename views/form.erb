@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Cotización</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    <form action="/submit" method="post">
+        <label for="client_dni">DNI del Cliente:</label>
+        <input type="text" id="client_dni" name="client_dni"><br><br>
+
+        <label for="debtor_dni">DNI del Deudor:</label>
+        <input type="text" id="debtor_dni" name="debtor_dni"><br><br>
+
+        <label for="document_amount">Monto del Documento:</label>
+        <input type="number" id="document_amount" name="document_amount"><br><br>
+
+        <label for="folio">Folio:</label>
+        <input type="text" id="folio" name="folio"><br><br>
+
+        <label for="expiration_date">Fecha de Vencimiento:</label>
+        <input type="date" id="expiration_date" name="expiration_date"><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
+    

@@ -1,5 +1,4 @@
 require 'date'
-require 'pry'
 
 module Calculator
 
@@ -10,13 +9,13 @@ module Calculator
     advance_percent = (api_response["advance_percent"] / 100)
     diferencia_dias = dias_corridos_desde(fecha_formulario, expiration_date)
     #Calculos
-    costo = (document_amount * advance_percent) * ((document_rate/100) / 30 * diferencia_dias)
-    giro = (document_amount * advance_percent) - (costo + commission)
-    excedente =  (document_amount - (document_amount * advance_percent))
+    costo = document_amount * advance_percent * (document_rate / 30 * diferencia_dias)
+    giro = document_amount * advance_percent - (costo + commission)
+    excedente = document_amount - (document_amount * advance_percent)
     #Formateos
-    monto_costo = format_number_with_delimiter(costo)
-    monto_giro = format_number_with_delimiter(giro)
-    monto_excedente = format_number_with_delimiter(excedente)
+    monto_costo = format_number_with_delimiter(costo.round)
+    monto_giro = format_number_with_delimiter(giro.round)
+    monto_excedente = format_number_with_delimiter(excedente.round)
     [monto_costo, monto_giro, monto_excedente]
   end
 
